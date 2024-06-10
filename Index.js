@@ -5,18 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const countDisLike1 = document.getElementById('countDisLike1');
   const comment1 = document.getElementById('comment1');
   const submit1 = document.getElementById('submit1');
-
-  const btnLike2 = document.getElementById('btnLike2');
-  const btnDisLike2 = document.getElementById('btnDisLike2');
-  const countLike2 = document.getElementById('countLike2');
-  const countDisLike2 = document.getElementById('countDisLike2');
-  const comment2 = document.getElementById('comment2');
-  const submit2 = document.getElementById('submit2');
+  const commentSection1 = document.getElementById('commentSection1');
 
   let likeCount1 = 0;
   let dislikeCount1 = 0;
-  let likeCount2 = 0;
-  let dislikeCount2 = 0;
 
   btnLike1.addEventListener('click', () => {
     likeCount1++;
@@ -29,30 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   submit1.addEventListener('click', () => {
-    const comment = comment1.value.trim();
-    if (comment !== '') {
-      // You can handle posting the comment here
-      console.log('Comment 1:', comment);
+    const commentText = comment1.value.trim();
+    if (commentText !== '') {
+      const commentItem = document.createElement('div');
+      commentItem.classList.add('mb-2');
+      commentItem.textContent = commentText;
+      commentSection1.appendChild(commentItem);
       comment1.value = ''; // Clear the comment input
     }
   });
-
-  btnLike2.addEventListener('click', () => {
-    likeCount2++;
-    countLike2.textContent = likeCount2;
-  });
-
-  btnDisLike2.addEventListener('click', () => {
-    dislikeCount2++;
-    countDisLike2.textContent = dislikeCount2;
-  });
-
-  submit2.addEventListener('click', () => {
-    const comment = comment2.value.trim();
-    if (comment !== '') {
-      console.log('Comment 2:', comment);
-      comment2.value = ''; 
-    }
-  });
 });
-      
