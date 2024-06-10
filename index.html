@@ -12,7 +12,7 @@
     }
     .post-container {
       margin: 20px auto;
-      max-width: 800px;
+      max-width: 1000px; /* Increased max-width to accommodate side-by-side posts */
     }
     .post {
       background-color: #FFFFFF; /* White background for posts */
@@ -28,12 +28,18 @@
     .comment-box {
       margin-top: 20px;
     }
+    .comment {
+      margin-top: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
   </style>
 </head>
 <body>
   <div class="container mt-5 post-container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-md-6">
         <div class="post">
           <img src="IMG_20240428_111722_188.jpg" class="post-img" alt="Post Image 1">
           <div class="comment-box">
@@ -46,9 +52,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
+      <div class="col-md-6">
         <div class="post">
           <img src="IMG_20240429_200042.jpg" class="post-img" alt="Post Image 2">
           <div class="comment-box">
@@ -66,4 +70,5 @@
 
   <script src="Index.js"></script>
 </body>
-</html>
+  </html>
+  
