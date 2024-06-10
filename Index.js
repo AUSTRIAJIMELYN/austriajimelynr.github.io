@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const dislikeBtn = post.querySelector('.btn-dislike');
     const likeCountSpan = post.querySelector('.like-count');
     const dislikeCountSpan = post.querySelector('.dislike-count');
+    const commentBox = post.querySelector('.comment-box textarea');
+    const postBtn = post.querySelector('.comment-box button');
+    const commentsContainer = post.querySelector('.comments');
 
     let likeCount = 0;
     let dislikeCount = 0;
@@ -20,14 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
       dislikeCountSpan.textContent = dislikeCount;
     });
 
-    const commentBox = post.querySelector('.comment-box textarea');
-    const postBtn = post.querySelector('.comment-box button');
-    const commentsSection = post.querySelector('.comment-section div');
-
     postBtn.addEventListener('click', () => {
       const comment = commentBox.value.trim();
       if (comment !== '') {
-        addComment(commentsSection, comment);
+        addComment(commentsContainer, comment);
         commentBox.value = ''; // Clear the comment input
       }
     });
@@ -40,4 +39,4 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   });
 });
-      
+        
