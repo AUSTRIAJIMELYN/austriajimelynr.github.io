@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Function to handle like and dislike buttons
+  
   function setupLikeDislikeButtons(post) {
     const likeBtn = post.querySelector('.btn-like');
     const dislikeBtn = post.querySelector('.btn-dislike');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Function to handle comment posting
+  
   function setupCommentBox(post) {
     const commentBox = post.querySelector('.comment-box textarea');
     const postBtn = post.querySelector('.comment-box button');
@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Function to add a comment to the comments container
   function addComment(container, comment) {
     const div = document.createElement('div');
     div.classList.add('comment', 'mt-2');
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     container.appendChild(div);
   }
 
-  // Initialize all posts
+  
   const posts = document.querySelectorAll('.post');
   posts.forEach(post => {
     setupLikeDislikeButtons(post);
