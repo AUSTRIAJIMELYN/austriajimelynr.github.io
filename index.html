@@ -7,12 +7,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
     body {
-      background-color: #E0E0E0; 
+      background-color: #E0E0E0; /* Twitter-like background color */
       font-family: Arial, sans-serif;
     }
     .card {
       margin-bottom: 20px;
-      background-color: #FFFFFF; 
+      background-color: #FFFFFF; /* White background for cards */
     }
     .card-body {
       display: flex;
@@ -25,47 +25,40 @@
     .comment-box {
       margin-top: 10px;
     }
+    .comment-section {
+      border: 1px solid #CCCCCC;
+      padding: 10px;
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
   </style>
 </head>
 <body>
   <div class="container mt-5">
     <div class="row">
-      <div class="col-6">
+      <div class="col-12">
         <div class="card">
-          <img src="IMG_20240428_111722_188.jpg" class="card-img-top" alt="Post Image 1">
-          <div class="card-body">
-            <button class="btn btn-primary btn-sm btn-like" id="btnLike1">Like</button>
-            <output id="countLike1">0</output>
-            <button class="btn btn-secondary btn-sm btn-dislike" id="btnDisLike1">Dislike</button>
-            <output id="countDisLike1">0</output>
-          </div>
-          <div class="card-body comment-box">
-            <textarea class="form-control" id="comment1" rows="1" placeholder="Add a comment..."></textarea>
-            <button class="btn btn-primary btn-sm mt-2" id="submit1">Post</button>
-          </div>
-          <div class="card-body">
-            <div class="comment-section" id="commentSection1">
-              <!-- Comments will be added here dynamically -->
+          <div class="row">
+            <div class="col-md-6">
+              <img src="IMG_20240428_111722_188.jpg" class="card-img-top" alt="Post Image 1">
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="card">
-          <img src="IMG_20240429_200042.jpg" class="card-img-top" alt="Post Image 2">
-          <div class="card-body">
-            <button class="btn btn-primary btn-sm btn-like" id="btnLike2">Like</button>
-            <output id="countLike2">0</output>
-            <button class="btn btn-secondary btn-sm btn-dislike" id="btnDisLike2">Dislike</button>
-            <output id="countDisLike2">0</output>
-          </div>
-          <div class="card-body comment-box">
-            <textarea class="form-control" id="comment2" rows="1" placeholder="Add a comment..."></textarea>
-            <button class="btn btn-primary btn-sm mt-2" id="submit2">Post</button>
-          </div>
-          <div class="card-body">
-            <div class="comment-section" id="commentSection2">
-              <!-- Comments will be added here dynamically -->
+            <div class="col-md-6">
+              <div class="card-body">
+                <button class="btn btn-primary btn-sm btn-like" id="btnLike1">Like</button>
+                <output id="countLike1">0</output>
+                <button class="btn btn-secondary btn-sm btn-dislike" id="btnDisLike1">Dislike</button>
+                <output id="countDisLike1">0</output>
+              </div>
+              <div class="card-body comment-box">
+                <textarea class="form-control" id="comment1" rows="1" placeholder="Add a comment..."></textarea>
+                <button class="btn btn-primary btn-sm mt-2" id="submit1">Post</button>
+              </div>
+              <div class="card-body">
+                <div class="comment-section" id="commentSection1">
+                  <!-- Comments will be added here dynamically -->
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -75,5 +68,5 @@
 
   <script src="Index.js"></script>
 </body>
-      </html>
-              
+                  </html>
+                    
