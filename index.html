@@ -12,7 +12,7 @@
     }
     .post-container {
       margin: 20px auto;
-      max-width: 800px; /* Adjusted max-width */
+      max-width: 1000px; /* Adjusted max-width */
     }
     .post {
       border: 1px solid #CCCCCC; /* Border around the post */
@@ -39,14 +39,28 @@
       border-radius: 5px;
       background-color: #f0f0f0;
     }
+    /* Additional styles for two pictures side by side */
+    .post .row {
+      margin: 0 -10px;
+    }
+    .post .col {
+      padding: 0 10px;
+    }
   </style>
 </head>
 <body>
   <div class="container mt-5 post-container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-md-6">
         <div class="post">
-          <img src="IMG_20240428_111722_188.jpg" class="post-img" alt="Post Image 1">
+          <div class="row">
+            <div class="col">
+              <img src="IMG_20240428_111722_188.jpg" class="post-img" alt="Post Image 1">
+            </div>
+            <div class="col">
+              <img src="IMG_20240429_200042.jpg" class="post-img" alt="Post Image 2">
+            </div>
+          </div>
           <div class="btn-group" role="group" aria-label="Post Actions">
             <button class="btn btn-primary btn-sm btn-like">Like</button>
             <button class="btn btn-secondary btn-sm btn-dislike">Dislike</button>
