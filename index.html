@@ -19,6 +19,7 @@
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 20px;
+      text-align: center; /* Center align content */
     }
     .post-img {
       width: 100%;
@@ -29,6 +30,9 @@
     .btn-like,
     .btn-dislike {
       margin-right: 10px;
+    }
+    .like-dislike-info {
+      margin-bottom: 10px;
     }
     .comment-box {
       margin-top: 20px;
@@ -53,19 +57,12 @@
     <div class="row">
       <div class="col-md-6">
         <div class="post">
-          <div class="row">
-            <div class="col">
-              <img src="IMG_20240428_111722_188.jpg" class="post-img" alt="Post Image 1">
-            </div>
-            <div class="col">
-              <img src="IMG_20240429_200042.jpg" class="post-img" alt="Post Image 2">
-            </div>
-          </div>
+          <img src="IMG_20240428_111722_188.jpg" class="post-img" alt="Post Image 1">
           <div class="btn-group" role="group" aria-label="Post Actions">
             <button class="btn btn-primary btn-sm btn-like">Like</button>
             <button class="btn btn-secondary btn-sm btn-dislike">Dislike</button>
           </div>
-          <div class="likes-dislikes mt-3">
+          <div class="like-dislike-info">
             <span class="like-count">0</span> likes, <span class="dislike-count">0</span> dislikes
           </div>
           <div class="comment-box">
@@ -75,6 +72,26 @@
           <div class="comment-section mt-3">
             <h5>Comments:</h5>
             <div id="comments1"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="post">
+          <img src="IMG_20240429_200042.jpg" class="post-img" alt="Post Image 2">
+          <div class="btn-group" role="group" aria-label="Post Actions">
+            <button class="btn btn-primary btn-sm btn-like">Like</button>
+            <button class="btn btn-secondary btn-sm btn-dislike">Dislike</button>
+          </div>
+          <div class="like-dislike-info">
+            <span class="like-count">0</span> likes, <span class="dislike-count">0</span> dislikes
+          </div>
+          <div class="comment-box">
+            <textarea class="form-control" rows="1" placeholder="Add a comment..."></textarea>
+            <button class="btn btn-primary btn-sm mt-2">Post</button>
+          </div>
+          <div class="comment-section mt-3">
+            <h5>Comments:</h5>
+            <div id="comments2"></div>
           </div>
         </div>
       </div>
