@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const addComment = (container, comment) => {
     const div = document.createElement('div');
-    div.classList.add('alert', 'alert-secondary', 'mt-2');
+    div.classList.add('comment', 'mt-2');
     div.textContent = comment;
     container.appendChild(div);
   };
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     postBtn.addEventListener('click', () => {
       const comment = commentBox.value.trim();
       if (comment !== '') {
-        addComment(container.parentElement.querySelector('.comment-section > div'), comment);
+        addComment(container.querySelector('.comment-section > div'), comment);
         commentBox.value = ''; // Clear the comment input
       }
     });
@@ -25,4 +25,3 @@ document.addEventListener('DOMContentLoaded', () => {
   addCommentHandler(document.querySelector('.comment-box:nth-child(odd)'));
   addCommentHandler(document.querySelector('.comment-box:nth-child(even)'));
 });
-      
