@@ -16,7 +16,7 @@
       border: 1px solid #DBDBDB;
       margin: 20px auto;
       padding: 20px;
-      max-width: 600px;
+      max-width: 800px;
     }
     .post-header {
       display: flex;
@@ -28,8 +28,12 @@
       height: 40px;
       margin-right: 10px;
     }
+    .post-images {
+      display: flex;
+      justify-content: space-between;
+    }
     .post-img {
-      width: 100%;
+      width: 48%;
       height: auto;
       margin: 15px 0;
       cursor: pointer;
@@ -38,14 +42,10 @@
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-    .actions img {
-      width: 24px;
-      height: 24px;
-      cursor: pointer;
+      margin-top: 10px;
     }
     .comment-section {
-      margin-top: 10px;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -55,18 +55,20 @@
       <img src="profile_picture.jpg" alt="Profile Picture">
       <span>Username</span>
     </div>
-    <img src="IMG_20240428_111722_188.jpg" alt="Post Image 1" class="post-img" id="postImg1">
+    <div class="post-images">
+      <img src="IMG_20240428_111722_188.jpg" alt="Post Image 1" class="post-img" id="postImg1">
+      <img src="IMG_20240429_200042.jpg" alt="Post Image 2" class="post-img" id="postImg2">
+    </div>
     <div class="actions">
-      <img src="like_icon.png" alt="Like" id="btnLike1">
+      <button class="btn btn-primary" id="btnLike1">Like</button>
       <output id="countLike1">0</output>
-      <img src="dislike_icon.png" alt="Dislike" id="btnDisLike1">
+      <button class="btn btn-secondary" id="btnDisLike1">Dislike</button>
       <output id="countDisLike1">0</output>
     </div>
-    <img src="IMG_20240429_200042.jpg" alt="Post Image 2" class="post-img" id="postImg2">
     <div class="actions">
-      <img src="like_icon.png" alt="Like" id="btnLike2">
+      <button class="btn btn-primary" id="btnLike2">Like</button>
       <output id="countLike2">0</output>
-      <img src="dislike_icon.png" alt="Dislike" id="btnDisLike2">
+      <button class="btn btn-secondary" id="btnDisLike2">Dislike</button>
       <output id="countDisLike2">0</output>
     </div>
     <div class="comment-section">
@@ -93,4 +95,5 @@
 
   <script src="Index.js"></script>
 </body>
-</html>
+        </html>
+        
