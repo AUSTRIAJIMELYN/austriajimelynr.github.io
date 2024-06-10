@@ -19,7 +19,6 @@
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 20px;
-      text-align: center; /* Center align content */
     }
     .post-img {
       width: 100%;
@@ -33,6 +32,10 @@
     }
     .like-dislike-info {
       margin-bottom: 10px;
+      text-align: left; /* Align like/dislike info to the left */
+    }
+    .like-dislike-info span {
+      margin-right: 10px;
     }
     .comment-box {
       margin-top: 20px;
@@ -59,11 +62,10 @@
         <div class="post">
           <img src="IMG_20240428_111722_188.jpg" class="post-img" alt="Post Image 1">
           <div class="btn-group" role="group" aria-label="Post Actions">
+            <span class="like-count">0</span>
             <button class="btn btn-primary btn-sm btn-like">Like</button>
+            <span class="dislike-count">0</span>
             <button class="btn btn-secondary btn-sm btn-dislike">Dislike</button>
-          </div>
-          <div class="like-dislike-info">
-            <span class="like-count">0</span> likes, <span class="dislike-count">0</span> dislikes
           </div>
           <div class="comment-box">
             <textarea class="form-control" rows="1" placeholder="Add a comment..."></textarea>
@@ -79,11 +81,10 @@
         <div class="post">
           <img src="IMG_20240429_200042.jpg" class="post-img" alt="Post Image 2">
           <div class="btn-group" role="group" aria-label="Post Actions">
+            <span class="like-count">0</span>
             <button class="btn btn-primary btn-sm btn-like">Like</button>
+            <span class="dislike-count">0</span>
             <button class="btn btn-secondary btn-sm btn-dislike">Dislike</button>
-          </div>
-          <div class="like-dislike-info">
-            <span class="like-count">0</span> likes, <span class="dislike-count">0</span> dislikes
           </div>
           <div class="comment-box">
             <textarea class="form-control" rows="1" placeholder="Add a comment..."></textarea>
@@ -100,4 +101,5 @@
 
   <script src="Index.js"></script>
 </body>
-</html>
+  </html>
+  
