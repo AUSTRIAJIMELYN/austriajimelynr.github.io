@@ -32,6 +32,7 @@
       width: 100%;
       height: auto;
       margin: 15px 0;
+      cursor: pointer;
     }
     .actions {
       display: flex;
@@ -54,19 +55,42 @@
       <img src="profile_picture.jpg" alt="Profile Picture">
       <span>Username</span>
     </div>
-    <img src="IMG_20240428_111722_188.jpg" alt="Post Image" class="post-img">
+    <img src="IMG_20240428_111722_188.jpg" alt="Post Image 1" class="post-img" id="postImg1">
     <div class="actions">
-      <img src="like_icon.png" alt="Like" id="btnLike">
-      <output id="countLike">0</output>
-      <img src="dislike_icon.png" alt="Dislike" id="btnDisLike">
-      <output id="countDisLike">0</output>
+      <img src="like_icon.png" alt="Like" id="btnLike1">
+      <output id="countLike1">0</output>
+      <img src="dislike_icon.png" alt="Dislike" id="btnDisLike1">
+      <output id="countDisLike1">0</output>
+    </div>
+    <img src="IMG_20240429_200042.jpg" alt="Post Image 2" class="post-img" id="postImg2">
+    <div class="actions">
+      <img src="like_icon.png" alt="Like" id="btnLike2">
+      <output id="countLike2">0</output>
+      <img src="dislike_icon.png" alt="Dislike" id="btnDisLike2">
+      <output id="countDisLike2">0</output>
     </div>
     <div class="comment-section">
       <input type="text" class="form-control" id="comment" placeholder="Add a comment...">
-      <button class="btn btn-primary mt-2" id="submit">Submit</button>
+      <button class="btn btn-primary mt-2" id="submit">Post</button>
       <textarea class="form-control mt-3" id="commentbox" rows="3" readonly></textarea>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Image</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" id="modalImage" class="img-fluid" alt="Modal Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="Index.js"></script>
 </body>
 </html>
