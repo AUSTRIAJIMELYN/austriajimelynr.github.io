@@ -1,6 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const post1Comments = document.getElementById('comments1');
-  const post2Comments = document.getElementById('comments2');
+  const post = document.querySelector('.post');
+  const likeBtn = post.querySelector('.btn-like');
+  const dislikeBtn = post.querySelector('.btn-dislike');
+  const likeCountSpan = post.querySelector('.like-count');
+  const dislikeCountSpan = post.querySelector('.dislike-count');
+
+  let likeCount = 0;
+  let dislikeCount = 0;
+
+  likeBtn.addEventListener('click', () => {
+    likeCount++;
+    likeCountSpan.textContent = likeCount;
+  });
+
+  dislikeBtn.addEventListener('click', () => {
+    dislikeCount++;
+    dislikeCountSpan.textContent = dislikeCount;
+  });
+
+  const commentBox = post.querySelector('.comment-box textarea');
+  const postBtn = post.querySelector('.comment-box button');
+  const commentsSection = post.querySelector('.comment-section div');
+
+  postBtn.addEventListener('click', () => {
+    const comment = commentBox.value.trim();
+    if (comment !== '') {
+      addComment(commentsSection, comment);
+      commentBox.value = ''; // Clear the comment input
+    }
+  });
 
   const addComment = (container, comment) => {
     const div = document.createElement('div');
@@ -8,20 +36,4 @@ document.addEventListener('DOMContentLoaded', () => {
     div.textContent = comment;
     container.appendChild(div);
   };
-
-  const addCommentHandler = (container) => {
-    const commentBox = container.querySelector('textarea');
-    const postBtn = container.querySelector('button');
-
-    postBtn.addEventListener('click', () => {
-      const comment = commentBox.value.trim();
-      if (comment !== '') {
-        addComment(container.querySelector('.comment-section > div'), comment);
-        commentBox.value = ''; // Clear the comment input
-      }
-    });
-  };
-
-  addCommentHandler(document.querySelector('.comment-box:nth-child(odd)'));
-  addCommentHandler(document.querySelector('.comment-box:nth-child(even)'));
 });
