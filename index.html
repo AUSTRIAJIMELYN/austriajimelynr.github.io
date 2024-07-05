@@ -31,10 +31,10 @@
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: all 0.3s;
     }
     .product-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-10px) scale(1.05);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
     .product-card img {
@@ -57,9 +57,6 @@
       background: #f8f9fa;
       font-weight: bold;
       margin-top: 10px;
-      text-align: center;
-    }
-    .order-section {
       text-align: center;
     }
   </style>
@@ -132,7 +129,7 @@
   </div>
 
   <div class="row justify-content-center">
-    <div class="col-md-4 order-section">
+    <div class="col-md-4 text-center">
       <label for="carts">Orders</label>
       <textarea class="form-control" rows="29" id="carts" cols="200" readonly style="width:350px; height:400px; font-size:12px;"></textarea>
       <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
@@ -143,5 +140,5 @@
 </div>
 <script src="Index.js"></script>
 </body>
-          </html>
-          
+  </html>
+        
