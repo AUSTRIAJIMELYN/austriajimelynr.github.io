@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const prices = {
-        price1: 1500.00,
-        price2: 1300.00,
-        price3: 1400.00,
-        price4: 1600.00,
-        price5: 1700.00,
-        price6: 1800.00,
+        price1: 10000.00,
+        price2: 15000.00,
+        price3: 15000.00,
+        price4: 10000.00,
+        price5: 10000.00,
+        price6: 20000.00,
     };
 
     const qtyInputs = [
@@ -38,21 +38,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         totalInput.value = total.toFixed(2);
         cartsTextarea.value = cartText.trim();
-        calculateChange(); 
+        calculateChange(); // Recalculate change whenever cart is updated
     }
 
     function calculateChange() {
         const total = parseFloat(totalInput.value) || 0;
         const cash = parseFloat(cashInput.value) || 0;
         const change = cash - total;
-        changeInput.value = change.toFixed(2);
-    }
-
-    qtyInputs.forEach(input => {
-        input.addEventListener('input', () => {
-            updateCart();
-            calculateChange(); 
-        });
-    });
-    cashInput.addEventListener('input', calculateChange);
-});
+        changeInput.value
+        
