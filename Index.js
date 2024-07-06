@@ -48,19 +48,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         changeInput.value = change.toFixed(2);
     }
 
-    function printReceipt() {
-        const receiptWindow = window.open('', '', 'width=600,height=400');
-        receiptWindow.document.write('<html><head><title>Receipt</title></head><body>');
-        receiptWindow.document.write('<h1>Receipt</h1>');
-        receiptWindow.document.write('<pre>' + cartsTextarea.value + '</pre>');
-        receiptWindow.document.write('<p>Total: ' + totalInput.value + '</p>');
-        receiptWindow.document.write('<p>Cash Tendered: ' + cashInput.value + '</p>');
-        receiptWindow.document.write('<p>Change: ' + changeInput.value + '</p>');
-        receiptWindow.document.write('</body></html>');
-        receiptWindow.document.close();
-        receiptWindow.print();
-    }
-
     qtyInputs.forEach(input => {
         input.addEventListener('input', () => {
             updateCart();
@@ -68,6 +55,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
     cashInput.addEventListener('input', calculateChange);
-    window.printReceipt = printReceipt; // Make the function globally accessible
 });
-            
+        
